@@ -101,6 +101,7 @@ int main(void)
 void usart1_handler(void){
 	if(READ_BIT(USART1_BASE + USART_SR_OFFSET , ORE_BIT)){
 		char ch = '#';
+blink_count(LED_RED,10);
 		usart1_send_char(ch);
 		ch = usart1_receive_char();
 
@@ -112,6 +113,7 @@ void usart1_handler(void){
 				usart1_send_char('\n');
 
 			usart1_send_char(ch);
+blink_count(LED_GREEN,10);
 		
 	}
 }
