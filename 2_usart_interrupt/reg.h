@@ -70,6 +70,7 @@
 #define GPIO_PORTC 2
 #define GPIO_PORTD 3
 
+
 #define GPIO_BASE(port) (0x40020000 + 0x400 * (port))
 
 #define GPIOx_MODER_OFFSET 0x00
